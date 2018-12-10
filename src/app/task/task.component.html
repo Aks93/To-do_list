@@ -1,0 +1,31 @@
+<h4>Once completed click Task completed button!!</h4>
+<br/>
+<form class="well" (submit)="addTask($event)">
+<div class="form-group">
+<input type="text" [(ngModel)]="title" name="title" class="form-control" placeholder="Add New Task....">
+</div>
+<input type="submit" class="btn btn-primary" value="Add New Task">
+</form>
+
+
+<div class="task-list">
+<div *ngFor="let task of tasks">
+
+<div class="col-md-1">
+</div>
+<div class="col-md-7">
+<ul>
+<li>        
+{{task.title}}
+</li>
+</ul>
+</div>
+<div class="col-md-4">
+<input type="button" (click)="deleteTask(task._id)" class="btn btn-danger" value="Task Completed!">
+</div>
+<br/><br/>
+</div>
+</div>	
+<div>
+ <h4 style="margin-top:150px;margin-left:350px;">Developed by Akshata 2018-2019</h4>   
+</div>
